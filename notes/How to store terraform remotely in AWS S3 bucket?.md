@@ -1,9 +1,18 @@
-# Learn Terraform
+---
+created: 2025-12-02
+title: How to store terraform remotely in AWS S3 bucket?
+tags:
+  - 🦮how-to
+  - terraform
+  - aws
+  - config
+aliases:
+---
+> [!warning] Before run backend we need create [[AWS S3|S3]] bucket and [[Dynamodb|dynamo db]]
 
-## How to store terraform remotely in AWS S3 bucket?
+### 1. Define resources S3 and DynamoDB
 
-### 1. Define resources, such as S3 and DynamoDB
-
+  
 ```tf
 resource "aws_s3_bucket" "terraform_state" {
 	bucket = "your-unique-terraform-state-bucket-name"
